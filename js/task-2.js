@@ -24,17 +24,17 @@ const images = [
     alt: "Lighthouse Coast Sea",
   },
 ];
-// Знаходимо елемент ul.gallery
-const gallery = document.querySelector(".gallery");
-// За допомогою шаблоного рядка створюємо HTML розмітку для кожного зображення
-const image = images
-  .map(
-    ({ url, alt }) =>
-      `<li class="gallery-item"><img src="${url}" alt="${alt}" class="gallery-image"></li>`
-  )
-  .join("");
 
-// Додаємо створену розмітку в DOM за одну операцію
-gallery.innerHTML = image;
+//* За допомогою шаблоного рядка створюємо HTML розмітку для кожного зображення
+const createImgCard = (image) => {
+  //* Повернення шаблоного рядка з розміткою
+  return `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}" class="gallery-image"></li>`;
+};
 
-console.log(gallery);
+//* Створення масиву рядків із елементами
+const imageCard = images.map((image) => createImgCard(image)).join("");
+
+//* Знаходимо елемент та додаємо галерею до DOM за одну операцію
+const galleryListEl = document.querySelector(".gallery");
+
+galleryListEl.innerHTML = imageCard;

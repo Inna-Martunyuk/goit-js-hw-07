@@ -8,11 +8,13 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background: #fff;
   color: #212121;
   line-height: 1.5;
 }
+/*------task-1--------*/
 
+/*------task-2--------*/
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -23,7 +25,8 @@ body {
 }
 
 .gallery-item {
-  flex: calc(50% - 20px);
+  width: calc((100% - 48px) / 3);
+
   box-sizing: border-box;
 }
 
@@ -32,4 +35,126 @@ body {
   height: auto;
   display: block;
   border-radius: 8px;
+}
+/*------task-2--------*/
+
+/*------task-3--------*/
+.input-hello {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+}
+.input-hello::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  padding-left: 16px;
+}
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+/*------task-3--------*/
+
+/*------task-4--------*/
+.login-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+.label-form {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.input-form {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+.button-form {
+  border-radius: 8px;
+  border: none;
+  padding: 8px 16px;
+  width: 86px;
+  height: 40px;
+  background: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+/*------task-4--------*/
+/*------task-5--------*/
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 169px;
+  height: 80px;
+}
+.text-color {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.change-color {
+  border-radius: 8px;
+  border: none;
+  background: #4e75ff;
+  padding: 8px 16px;
+  width: 148px;
+  height: 40px;
+}
+
+/*------task-5--------*/
+.input-task-six {
+  border: 1px solid #808080;
+  border-radius: 8px;
+  width: 150px;
+  height: 40px;
+  padding: 8px 60px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.btn-input-one,
+.btn-two {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  height: 40px;
+  background: #4e75ff;
+  border: none;
+}
+.btn-two {
+  background: #ff4e4e;
+}
+.div-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
