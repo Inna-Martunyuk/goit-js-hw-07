@@ -1,24 +1,26 @@
 // Шукаємо елемент
-const form = document.querySelector(".login-form");
+const formEl = document.querySelector(".login-form");
 
-form.addEventListener("submit", (event) => {
-  // Сторінка не перезавантажується
-  event.preventDefault();
+// Додаємо обробник події
+formEl.addEventListener("submit", (event) => {
+  event.preventDefault(); // Зупиняємо перезавантаження сторінки
 
-  const { email, password } = form.elements;
+  const emailEl = formEl.elements.email;
+  const passwordEl = formEl.elements.password;
 
-  // Перевіряю  на заповненість полів
-  if (!email.value.trim() || !password.value.trim()) {
+  // Перевіряємо на заповненість полів
+  if (!emailEl.value.trim() || !passwordEl.value.trim()) {
     alert("All form fields must be filled in");
-    return; // Зупиняє виконання, коли є незаповненні поля
+    return;
   }
-  // Збираємо дані у об'єкт
+
   const formData = {
-    email: email.value.trim(),
-    password: password.value.trim(),
+    [emailEl.name]: emailEl.value,
+    [passwordEl.name]: passwordEl.value,
   };
-  // Виводимо у консоль
+
   console.log(formData);
-  // Очищення значення полів
-  form.reset();
+
+  // Скидаємо форму
+  formEl.reset();
 });

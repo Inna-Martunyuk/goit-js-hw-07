@@ -21,16 +21,16 @@ function createBoxes(amount) {
     div.style.height = `${size}px`;
     div.style.backgroundColor = getRandomHexColor();
     elements.push(div);
-    size += 10; // Збільшуємо розміри для наступного елемента
+    size += 10;
   }
-
-  boxesContainer.innerHTML = ""; // Очищуємо попередню колекцію
-  boxesContainer.append(...elements); // Додаємо нові елементи в DOM
+  // Очищуємо попередню колекцію і додаємо нові елементи
+  boxesContainer.innerHTML = "";
+  boxesContainer.append(...elements);
 }
 
 // Функція для очищення колекції div-елементів
 function destroyBoxes() {
-  boxesContainer.innerHTML = ""; // Очищуємо контейнер
+  boxesContainer.innerHTML = "";
 }
 
 // Обробник події для кнопки "Create"
